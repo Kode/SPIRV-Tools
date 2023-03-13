@@ -549,7 +549,7 @@ spv_result_t ValidateInterfaces(ValidationState_t& _) {
     }
   }
 
-  /*if (spvIsVulkanEnv(_.context()->target_env)) {
+  if (spvIsVulkanEnv(_.context()->target_env)) {
     for (auto& inst : _.ordered_instructions()) {
       if (inst.opcode() == spv::Op::OpEntryPoint) {
         if (auto error = ValidateLocations(_, &inst)) {
@@ -558,7 +558,7 @@ spv_result_t ValidateInterfaces(ValidationState_t& _) {
       }
       if (inst.opcode() == spv::Op::OpTypeVoid) break;
     }
-  }*/
+  }
 
   return SPV_SUCCESS;
 }
